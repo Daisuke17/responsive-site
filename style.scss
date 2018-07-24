@@ -1,0 +1,68 @@
+@import "compass";
+
+$baseColor:#b0c4de;
+
+html{ font-size: 62.5%; }
+
+body{
+    background-color:$baseColor;
+    
+}
+
+.image{
+    width:100%;
+    height:500px;
+    background:{
+        image:url('./image/MIYADSC_3425-3_TP_V4.jpg');
+        size:cover;
+        position:center;
+    }
+}
+
+h1{
+    text-align:center;
+}
+
+.container{
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(row); 
+    div{
+        h2{
+             text-align:center;
+             margin-bottom:100px;
+        p{
+            text-align:center;
+        
+      }
+    }
+  }
+}
+.box{
+    border:solid 1px black;
+    flex-basis:33%;
+}
+
+h3{
+    text-align:center;
+}
+
+.bottom{
+    @include border-radius(4px);
+    background-color:#ffffff;
+     text-align:center;
+     width:10%;
+     margin: 0 auto;
+     padding-top:5px;
+     padding-bottom:5px;
+}
+
+@media (max-width: 768px) {
+  .image {
+    height:250px;
+  }
+   .container{
+      @include flex-direction(column);
+   }
+}
+  
